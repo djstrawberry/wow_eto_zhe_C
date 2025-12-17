@@ -24,5 +24,9 @@ int main(void)
     if (exit_code == OK_CODE)
         printf("Кол-во перестановок: %zu\n", step_counter);
 
+    free_list(A);
+    free_list(B);
+    free_list(C);
+
     return exit_code;
 }

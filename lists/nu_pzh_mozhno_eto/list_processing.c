@@ -50,3 +50,14 @@ result_t pop_front(node_t **tower, node_t **popped_node)
 
     return exit_code;
 }
+
+void free_list(node_t *tower)
+{
+    node_t *temp_node;
+    while (tower)
+    {
+        temp_node = tower->next;
+        free(tower);
+        tower = temp_node;
+    }
+}
